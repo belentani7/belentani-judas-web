@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-judas-black: #050002;
+  --color-judas-red: #ff0033;
+  --color-judas-red-glow: rgba(255, 0, 51, 0.25);
+  
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Space Grotesk', sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-red-950/20 backdrop-blur-2xl border border-red-500/30;
+    box-shadow: 0 0 30px var(--color-judas-red-glow);
+  }
+  
+  .glass-panel:hover {
+    box-shadow: 0 0 45px rgba(255, 0, 51, 0.5);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px var(--color-judas-red);
+  }
+}
+
+body {
+  background-color: var(--color-judas-black);
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-judas-red);
+  color: white;
+}
+
+/* Custom Scrollbar for OS Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-judas-black);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 51, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-judas-red);
+}
