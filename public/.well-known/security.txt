@@ -1,0 +1,12 @@
+# security.txt for belentani-judas-web
+# Security contact information per RFC 9116
+
+Contact: mailto:security@belentani-judas-web.example.com
+Contact: https://belentani-judas-web.example.com/security/report
+Preferred-Languages: en
+Canonical: https://belentani-judas-web.example.com/.well-known/security.txt
+Policy: https://belentani-judas-web.example.com/security/policy
+Hiring: https://belentani-judas-web.example.com/careers/security
+Encryption: https://belentani-judas-web.example.com/.well-known/pgp-key.txt
+Acknowledgments: https://belentani-judas-web.example.com/security/hall-of-fame
+Expires: 2027-09-06T00:00:00.000Z

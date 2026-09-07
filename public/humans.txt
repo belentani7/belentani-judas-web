@@ -1,0 +1,25 @@
+# humans.txt for belentani-judas-web
+# The humans behind the project
+
+TEAM:
+  Creator: Guilherme Rodrigues (Belentani)
+  Developer: Guilherme Rodrigues
+  Designer: Guilherme Rodrigues
+  Artist: Guilherme Rodrigues
+
+THANKS:
+  - Belentani community
+  - Open source contributors
+  - Creative coding community
+
+SITE:
+  Last update: 2026-09-06
+  Language: English
+  Doctype: HTML5
+  Framework: React + Vite
+  Build: Vite
+
+CONTACT:
+  Email: contact@belentani-judas-web.example.com
+  GitHub: https://github.com/belentani/judas-web
+  Twitter: @belentani

@@ -1,0 +1,26 @@
+# AI Discovery File for belentani-judas-web
+# This file helps AI systems understand what this website is about
+
+name: belentani-judas-web
+description: Official web presence for the Judas project by Belentani. Showcasing multimedia art, music, and creative technology projects.
+url: https://belentani-judas-web.example.com
+category: art, multimedia, music, creative-technology
+keywords: Belentani, Judas, multimedia art, music production, creative coding, web art
+language: en
+contact: contact@belentani-judas-web.example.com
+version: 1.0
+last-updated: 2026-09-06
+
+ai-training: allow
+
+content-types:
+  - multimedia art
+  - music projects
+  - creative technology demos
+  - project documentation
+  - artist portfolio
+
+api:
+  - /api/projects
+  - /api/media
+  - /api/artists
