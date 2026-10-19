@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-export default function BootSequence({ onComplete }: { onComplete: () => void }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [logs, setLogs] = useState<string[]>([]);
-  const bootLogs = [
+const bootLogs = [
     'INIT_SYSTEM // BELENTANI_OS',
     'LOADING MODULE: JUDAS-CORE-07...',
     'ESTABLISHING NEURAL LINK...',
@@ -14,19 +11,29 @@ export default function BootSequence({ onComplete }: { onComplete: () => void })
     'WELCOME TO THE JUDAS EXPERIENCE.'
   ];
 
+export default function BootSequence({ onComplete }: { onComplete: () => void }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [logs, setLogs] = useState<string[]>([]);
+
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      onComplete();
+      return;
+    }
     let currentLogIndex = 0;
+    let exitAnimation: gsap.core.Tween | undefined;
     
     const interval = setInterval(() => {
       if (currentLogIndex < bootLogs.length) {
-        setLogs(prev => [...prev, bootLogs[currentLogIndex]]);
+        const log = bootLogs[currentLogIndex];
+        setLogs(prev => [...prev, log]);
         currentLogIndex++;
       } else {
         clearInterval(interval);
         
         // GSAP Zoom in and fade out
         if (containerRef.current) {
-          gsap.to(containerRef.current, {
+          exitAnimation = gsap.to(containerRef.current, {
             scale: 2,
             opacity: 0,
             duration: 1.5,
@@ -37,7 +44,10 @@ export default function BootSequence({ onComplete }: { onComplete: () => void })
       }
     }, 400);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      exitAnimation?.kill();
+    };
   }, [onComplete]);
 
   return (
@@ -59,6 +69,9 @@ export default function BootSequence({ onComplete }: { onComplete: () => void })
           )}
         </div>
       </div>
+      <button type="button" onClick={onComplete} className="mt-8 border border-red-500 px-5 py-3 text-white hover:bg-red-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+        Saltar introducción
+      </button>
     </div>
   );
 }

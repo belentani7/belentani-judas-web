@@ -11,9 +11,9 @@ En línea: <https://belentani7.github.io/belentani-judas-web/>
 
 ## Stack
 
-- **Next.js** — aplicación
+- **Vite y React** — aplicación
 - **TypeScript** — tipado
-- **Netlify** — despliegue (`netlify.toml`)
+- **Vercel** — despliegue (`vercel.json`, salida `dist/public`)
 
 ## Configuración
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import RedCodingRain from './components/RedCodingRain';
 import BootSequence from './components/BootSequence';
 import Header from './components/Header';
@@ -9,16 +9,17 @@ import Footer from './components/Footer';
 
 function App() {
   const [booted, setBooted] = useState(false);
+  const completeBoot = useCallback(() => setBooted(true), []);
 
   return (
     <div className="min-h-screen selection:bg-red-600 selection:text-white">
-      {!booted && <BootSequence onComplete={() => setBooted(true)} />}
+      {!booted && <BootSequence onComplete={completeBoot} />}
       
       {/* Background Layer */}
       <RedCodingRain />
 
       {/* Main OS Interface */}
-      <div className={`transition-opacity duration-1000 ${booted ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+      {booted && <div>
         <Header />
         <main>
           <Hero />
@@ -26,7 +27,7 @@ function App() {
           <AgentsPanel />
         </main>
         <Footer />
-      </div>
+      </div>}
     </div>
   );
 }

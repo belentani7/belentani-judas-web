@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test": "npm run build && node --test tests/production.test.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },
