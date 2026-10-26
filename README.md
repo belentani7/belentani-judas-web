@@ -7,7 +7,7 @@ Creative OS web del universo Judas.
 El **sistema operativo creativo** de la obra: la capa que organiza, no la obra en sí. Next.js
 como base, con el organismo Judas alrededor.
 
-En línea: <https://belentani7.github.io/belentani-judas-web/>
+En línea: sin publicar — GitHub Pages no está activo en repositorios privados.
 
 ## Stack
 
