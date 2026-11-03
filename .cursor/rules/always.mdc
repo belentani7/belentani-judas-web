@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+description: Reglas globales del ecosistema belentani7 para belentani-judas-web
+globs:
+  - '**/*'
+---
+
+# Reglas globales — belentani-judas-web (Cursor / AGENTS.md)
+
+## Siempre (Always Apply)
+
+- No commitear secretos, API keys, tokens ni credenciales. Usar `.env.example` y nunca `.env`.
+- Ejecutar `gitleaks` antes de cada push (config en `.gitleaks.toml`).
+- CODEOWNERS: `@belentani7` revisión requerida en cada PR.
+- Convenciones de commit: `type(scope): summary` (feat, fix, docs, chore, refactor, test, perf, style).
+- Cambios reversibles, uno a uno. No romper el working tree.
+
+## Por tipo de archivo
+
+- `**/*.html` — Impeccable: sin gradient text, sin side-stripe borders, sin eyebrow en cada sección, hero heading <= 6rem (96px), `focus-visible` (#ff073a), `lang`, viewport, touch targets >= 44px, estados vacío/error/carga, z-index semántico. No dejar `<style>` fuera de `</html>`.
+- `**/*.ts`, `**/*.tsx` — TypeScript, exports nombrados, no `any` sin justificación, async/await para I/O. (Nota: `tsconfig.app.json` no tiene `strict: true`; habilitar solo tras verificar con `tsc -b` en CI para no romper el build.)
+- `**/*.css` — Tailwind 4 + tokens CANON donde corresponda, focus visible, touch targets >= 44px.
+
+## Nested AGENTS.md
+
+- `AGENTS.md` en raíz: reglas globales del proyecto.
+- `src/AGENTS.md`: reglas del frontend React/Vite (opcional, anidado).
+- `tests/AGENTS.md`: reglas de pruebas (opcional, anidado).

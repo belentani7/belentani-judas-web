@@ -1,0 +1,33 @@
+---
+description: Contexto, stack y convenciones base del proyecto
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Proyecto: belentani7__belentani-judas-web
+
+Stack detectado: ci, frontend, node, react, tailwind, tests, typescript, vite.
+Gestores de paquetes: npm, pnpm.
+Tests: no detectados.
+
+## Protocolo
+
+1. Spec-first: PRD → SRS → Design Doc → ADR → Plan → tests GWT.
+2. Cambios pequeños, reversibles y con verificación real.
+3. Conventional commits: `type(scope): summary`.
+4. No commitear secretos ni credenciales.
+5. No ejecutar TypeScript sin compilar en producción.
+
+## Comandos
+
+- `dev`: `vite`
+- `build`: `tsc -b && vite build`
+- `test`: `npm run build && node --test tests/production.test.js`
+- `lint`: `oxlint`
+- `preview`: `vite preview`
+
+## Verificación mínima
+
+- Tests del stack en verde.
+- Build reproducible.
+- `gitleaks detect --source . --redact` limpio.
