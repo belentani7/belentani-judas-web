@@ -1,3 +1,4 @@
+import HeroShader from './components/HeroShader';
 import { useCallback, useState } from 'react';
 import RedCodingRain from './components/RedCodingRain';
 import BootSequence from './components/BootSequence';
