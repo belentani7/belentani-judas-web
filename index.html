@@ -1,13 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Judas Creative OS — Belentani</title>
-  <style>body{margin:0;font-family:system-ui,sans-serif;background:#0a0a0a;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh}h1{font-size:2rem;letter-spacing:0.1em}p{opacity:0.7;margin-top:1rem}</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09070b">
+<meta name="description" content="Judas Creative OS — universo creativo de Belentani. Música, identidad y experiencias digitales.">
+<title>Judas Creative OS | Belentani</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#09070b;color:#f8f2f4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 70% 25%,#42101c 0%,transparent 42%),radial-gradient(ellipse at 10% 85%,#0e2030 0%,transparent 50%),#09070b}
+a{color:inherit}a:focus-visible{outline:2px solid #ff7894;outline-offset:5px}
+.skip{position:absolute;left:1rem;top:-5rem;padding:.7rem;background:#fff;color:#111}.skip:focus{top:1rem}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.4rem clamp(1.2rem,5vw,5rem);border-bottom:1px solid #ffffff20}
+.brand{font-size:.8rem;font-weight:800;letter-spacing:.3em;text-decoration:none}nav a{font-size:.85rem;text-decoration:none;opacity:.8}
+main{min-height:75vh;display:grid;place-items:center;padding:5rem 1.3rem;text-align:center}
+.hero{max-width:900px}.eyebrow{color:#ff98a9;font-size:.8rem;letter-spacing:.4em;text-transform:uppercase}
+h1{font-size:clamp(4rem,14vw,10rem);line-height:.9;letter-spacing:-.075em;margin:1.5rem 0;text-shadow:0 0 90px #b5093b55}
+.lead{max-width:38rem;margin:0 auto;color:#d7c7ce;font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.65}
+.rule{height:1px;width:7rem;background:linear-gradient(90deg,transparent,#ff547c,transparent);margin:2.8rem auto}
+.cta{display:inline-block;border:1px solid #ff789480;border-radius:999px;padding:1rem 1.6rem;text-decoration:none;transition:background .2s}
+.cta:hover{background:#8f1d3b66}
+section{padding:3rem 1.3rem 5rem;text-align:center}section h2{font-size:clamp(1.5rem,4vw,2.6rem)}section p{color:#d7c7ce;line-height:1.7;max-width:40rem;margin:auto}
+footer{border-top:1px solid #ffffff20;padding:1.8rem;text-align:center;font-size:.8rem;color:#bdaeb5}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta{transition:none}}
+</style>
 </head>
 <body>
-  <h1>Judas Creative OS</h1>
-  <p>Sistema operativo creativo Vite + SEO cinemático</p>
-  <p>Sitio en construcción. Enlace restaurado.</p>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header><a class="brand" href="#inicio" aria-label="Belentani, inicio">BELENTANI</a><nav aria-label="Navegación principal"><a href="#universo">El universo</a></nav></header>
+<main id="contenido"><div class="hero" id="inicio"><p class="eyebrow">The Judas Experience</p><h1>JUDAS</h1><p class="lead">Un universo de música, memoria y transformación. La traición no es el final de la historia.</p><div class="rule" aria-hidden="true"></div><a class="cta" href="#universo">Entrar en el universo</a></div></main>
+<section id="universo" aria-labelledby="universo-titulo"><h2 id="universo-titulo">Will you kiss Judas again?</h2><p>Judas Creative OS es un espacio artístico de Belentani. Una experiencia que une narrativa, identidad y sonido. Este portal es el punto de entrada al universo.</p></section>
+<footer>© Belentani · Judas Creative OS</footer>
 </body>
 </html>
