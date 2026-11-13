@@ -27,3 +27,7 @@ construyendo y por qué.
 ## Licencia
 
 MIT — ver `LICENSE`.
+
+
+## Producto
+Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.
