@@ -15,8 +15,8 @@ importers:
         specifier: ^4.3.3
         version: 4.3.3(vite@8.3.3(@types/node@24.19.1)(jiti@2.7.0))
       autoprefixer:
-        specifier: ^10.6.1
-        version: 10.6.1(postcss@8.5.29)
+        specifier: ^10.6.2
+        version: 10.6.2(postcss@8.5.29)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -436,8 +436,8 @@ packages:
       oxc-transform-react:
         optional: true
 
-  autoprefixer@10.6.1:
-    resolution: {integrity: sha512-cL1Qz6ADZhcEbny/8HPfe99J6HhNoYtpX2LFLIbhgGE7Q1hlQVkYFdetDN7Id3KiQxhDrHwzlHr/YQCnZ8+xSA==}
+  autoprefixer@10.6.2:
+    resolution: {integrity: sha512-VOw9/yGTGwPPgzFcODtcv6zhEPIeIWkRSe10L2ri2f5vZ7ID7lCt6jZzRF5/ubgOZ+szYydmEF5AYsA5jxX1tA==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -1030,7 +1030,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.3(@types/node@24.19.1)(jiti@2.7.0)
 
-  autoprefixer@10.6.1(postcss@8.5.29):
+  autoprefixer@10.6.2(postcss@8.5.29):
     dependencies:
       browserslist: 4.29.3
       caniuse-lite: 1.0.30001815
