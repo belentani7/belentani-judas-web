@@ -24,6 +24,7 @@ jobs:
   lint:
     name: Lint & TypeCheck
     runs-on: ubuntu-latest
+      timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
         with:
@@ -48,6 +49,7 @@ jobs:
     # Required branch-protection context; this job runs only after lint succeeds.
     name: lint-test
     runs-on: ubuntu-latest
+      timeout-minutes: 20
     needs: lint
     steps:
       - uses: actions/checkout@v5
@@ -70,6 +72,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+      timeout-minutes: 20
     needs: test
     steps:
       - uses: actions/checkout@v5
@@ -96,6 +99,7 @@ jobs:
     # Required final context: lint -> test -> build -> security must all pass.
     name: CI
     runs-on: ubuntu-latest
+      timeout-minutes: 20
     needs: build
     steps:
       - uses: actions/checkout@v5
@@ -109,6 +113,7 @@ jobs:
   lighthouse:
     name: Lighthouse Audit
     runs-on: ubuntu-latest
+      timeout-minutes: 20
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
