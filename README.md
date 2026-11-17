@@ -31,3 +31,50 @@ MIT — ver `LICENSE`.
 
 ## Producto
 Véase `plataforma/OFERTA.md`, `plataforma/precios.json`, `plataforma/ONEPAGER.md`.
+
+## Que es
+
+Creative OS web del universo Judas: la interfaz y el sistema narrativo de la era, autocontenido.
+
+## Como se ejecuta
+
+```bash
+npm install
+npm run dev
+```
+
+Scripts declarados: `build`, `dev`, `lint`, `preview`, `test`.
+
+## Verificacion
+
+```bash
+node --test tests/
+```
+
+El test de humo comprueba que el arbol esperado existe y que el HTML o el paquete no esta roto.
+
+## Estructura
+
+```
+404.html
+AGENTS.md
+BIBLIA.md
+CHANGELOG.md
+CODEOWNERS
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+README.md
+SECURITY.md
+SECURITY_AUDIT_PROTOCOL.md
+STORY.md
+```
+
+## Entorno
+
+- Node.js 20+ o Python 3.11+ segun el stack detectado.
+- Windows 10/11, PowerShell 5.1 o bash.
+
+## Licencia
+
+MIT. Ver `LICENSE`.
